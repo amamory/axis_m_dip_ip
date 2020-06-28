@@ -89,7 +89,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 
 # Set 'sources_1' fileset properties
 set obj [get_filesets sources_1]
-set_property "top" "${top_name}" $obj
+#set_property "top" "${top_name}" $obj
 
 
 # Insert all the vhdl, sv, and verilog source files from ./hw/hdl into the project
@@ -251,11 +251,7 @@ if {[llength $block_files] == 1} {
   # Generate the wrapper
   make_wrapper -files [get_files *${design_name}.bd] -top
   # It is asuming that if there is a block file, its wrapper will be the top 
-<<<<<<< HEAD
-  add_files -norecurse ./vivado/${design_name}/${design_name}.srcs/sources_1/bd/${design_name}/hdl/${top_name}.v
-=======
   add_files -norecurse ./vivado/${design_name}/${design_name}.srcs/sources_1/bd/${design_name}/hdl/${design_name}_wrapper.v
->>>>>>> template/master
 } elseif {[llength $block_files] > 1} {
   puts "ERROR: multiple block files found. The script only supports one block per design"
   return
