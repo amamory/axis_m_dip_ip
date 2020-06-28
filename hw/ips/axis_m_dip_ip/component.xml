@@ -100,7 +100,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8ef76bac</spirit:value>
+            <spirit:value>532bad6c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -116,7 +116,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8ef76bac</spirit:value>
+            <spirit:value>532bad6c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -130,7 +130,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f92e9879</spirit:value>
+            <spirit:value>a7f7cbe2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -249,6 +249,13 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="std_logic_vector(15 downto 0)">
+        <spirit:name>address</spirit:name>
+        <spirit:displayName>Address</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.address" spirit:bitStringLength="16">0x0101</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
@@ -256,7 +263,7 @@
       <spirit:file>
         <spirit:name>../../hdl/Router_Source.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_8ef76bac</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_532bad6c</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -274,7 +281,7 @@
       <spirit:file>
         <spirit:name>xgui/Router_Source_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_a7f7cbe2</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -284,6 +291,11 @@
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Router_Source_v1_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>address</spirit:name>
+      <spirit:displayName>Address</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.address" spirit:bitStringLength="16">0x0101</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -298,18 +310,19 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Router_Source_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>4</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-06-22T00:09:49Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-06-28T22:49:32Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="user.org:user:Router_Source:1.0_ARCHIVE_LOCATION">/home/lsa/repos/xilinx/hdls/m_axis_dip_ip/hw/ips/m_axis_dip_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="user.org:user:Router_Source:1.0_ARCHIVE_LOCATION">/home/lsa/repos/xilinx/hdls/axis_m_dip_ip/hw/ips/axis_m_dip_ip</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5e917704"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="80c35f33"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="36c8f7fd"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="481284f2"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d1b583fe"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="82030873"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="138fcde1"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d49c4897"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
