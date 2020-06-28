@@ -27,6 +27,7 @@ use IEEE.std_logic_unsigned.all;
 --use work.HeMPS_defaults.all;
 
 entity Router_Source is
+generic( address: std_logic_vector(15 downto 0) := "0000000100000001");
 Port ( 
 	clock   : in  std_logic;
 	reset   : in  std_logic;  
@@ -116,7 +117,7 @@ begin
 
 	valid_o <= '0' when state = IDLE or state = WAIT_END else '1';
 	
-	data_o  <= x"00000011"       when state = SEND_HEADER  else -- always send to the local port
+	data_o  <= x"0000" & address when state = SEND_HEADER  else -- always send to the local port
 	           x"00000001"       when state = SEND_SIZE    else -- always send only one flit
 	           x"000000" & dip_i when state = SEND_PAYLOAD else -- always send the value in the dip switches
 	           x"00000000";
