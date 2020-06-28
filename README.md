@@ -1,6 +1,6 @@
-# Vivado MODULE NAME
+# DIP switched to AXI master streaming interface
 
-This repo contains scripts to recreate **DESCRIBE THE MODULE HERE**. The project is setup for Zedboard, although it would be easy to change to other boards assuming you have some basic TCL skills.
+This repo contains scripts to recreate a Vivado IP which connects Zedboard's dip switches to an AXI master streaming interface. The project is setup for Zedboard, although it would be easy to change to other boards assuming you have some basic TCL skills.
 
 The scripts are quite reusable if you keep the same dir structure. It should be useful for other Vivado/SDK projects with minor efforts.
 
