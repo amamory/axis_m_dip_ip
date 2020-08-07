@@ -30,7 +30,7 @@ entity Router_Source is
 generic( address: std_logic_vector(15 downto 0) := "0000000100000001");
 Port ( 
 	clock   : in  std_logic;
-	reset   : in  std_logic;  
+	reset_n : in  std_logic;  
 	-- connected to the zedboard
 	dip_i   : in  std_logic_vector(7 downto 0);
 	send_i  : in  std_logic;
@@ -67,13 +67,15 @@ signal state, state_next : State_Type;
 
 begin
 
-    process(clock, reset)
+    process(clock)
     begin
-        if (reset = '1') then 
-            state <= IDLE;
-        elsif (clock'event and clock = '1') then
-            state <= state_next;
-        end if; 
+        if (clock'event and clock = '1') then
+            if (reset_n = '0') then 
+                state <= IDLE;
+            else
+                state <= state_next;
+            end if;
+        end if;
     end process;
 
 
